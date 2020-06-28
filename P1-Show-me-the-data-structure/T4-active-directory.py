@@ -19,22 +19,6 @@ class Group(object):
     def get_name(self):
         return self.name
 
-
-parent = Group("parent")
-child = Group("child")
-sub_child = Group("subchild")
-sub_child_2 = Group("subchild2")
-
-sub_child_user = "sub_child_user"
-sub_child.add_user(sub_child_user)
-sub_child_2.add_user("sub_child_2")
-
-child.add_group(sub_child)
-child.add_group(sub_child_2)
-parent.add_group(child)
-
-child.add_user("child_user")
-
 def deeper_group_search(user, group, status):
     
     if user in group.get_users():
@@ -57,8 +41,21 @@ def is_user_in_group(user, group):
     """
     return deeper_group_search(user, group, False)
 
-    if user in group.get_users():
-        return True
+
+parent = Group("parent")
+child = Group("child")
+sub_child = Group("subchild")
+sub_child_2 = Group("subchild2")
+
+sub_child_user = "sub_child_user"
+sub_child.add_user(sub_child_user)
+sub_child_2.add_user("sub_child_2")
+
+child.add_group(sub_child)
+child.add_group(sub_child_2)
+parent.add_group(child)
+
+child.add_user("child_user")
 
 
 print(is_user_in_group("sub_child_user", parent))
