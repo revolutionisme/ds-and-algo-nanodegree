@@ -45,8 +45,8 @@ def find_codes(number: str):
     return number[:4]
 
 for row in calls:
-  area_codes.add(find_codes(row[0]))
-  area_codes.add(find_codes(row[1]))
+  if row[0].startswith("(080)"):
+    area_codes.add(find_codes(row[1]))
 
 code_list = list(area_codes)
 code_list.sort()
