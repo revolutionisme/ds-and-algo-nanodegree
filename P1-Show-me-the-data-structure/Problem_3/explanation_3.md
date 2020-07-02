@@ -3,9 +3,9 @@ Huffman coding implements a counter using dictionary and then uses heapq to main
 Time Complexity:
 
 encoding() - O(n) - where n is the number of characters in the original data
-decoding() - O(m) - where m is the encoded message
+decoding() - O(m) - where m is the number of characters in the encoded message (This is indeed log m as the dictionary is used rather than the tree)
 
-Space COmplexity:
+Space Complexity:
 
 encoding() - O(n) - data is stored as frequency of characters and then a heap and finally the encoder and decoder dict but they all store max n entries if no duplicates.
 

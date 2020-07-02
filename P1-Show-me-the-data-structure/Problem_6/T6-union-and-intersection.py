@@ -130,3 +130,40 @@ for i in elements_6:
 
 print(union(linked_list_5,linked_list_6))         # Expected elements [1, 2, 3, 4, 5, 6, 7]
 print(intersection(linked_list_5,linked_list_6))  # Expected elements [1, 2, 3, 4, 5, 6, 7]
+
+
+print("\n==========Test Case 4==========")
+linked_list_5 = LinkedList()
+linked_list_6 = LinkedList()
+
+# one list empty 
+elements_5 = [1,2,3,4,5,6,7]
+elements_6 = []
+
+for i in elements_5:
+    linked_list_5.append(i)
+
+for i in elements_6:
+    linked_list_6.append(i)
+
+print(union(linked_list_5,linked_list_6))         # Expected elements [1, 2, 3, 4, 5, 6, 7]
+print(intersection(linked_list_5,linked_list_6))  # Expected elements []
+
+
+
+print("\n==========Test Case 5==========")
+linked_list_5 = LinkedList()
+linked_list_6 = LinkedList()
+
+# both list empty 
+elements_5 = []
+elements_6 = []
+
+for i in elements_5:
+    linked_list_5.append(i)
+
+for i in elements_6:
+    linked_list_6.append(i)
+
+print(union(linked_list_5,linked_list_6))         # Expected elements []
+print(intersection(linked_list_5,linked_list_6))  # Expected elements []

@@ -40,10 +40,37 @@ class Blockchain():
         return '[' + '<== '.join(nodes) + ']'
     
 
-print("============ Test Case ============")
+print("============ Test Case 1 ============")
 blockchain = Blockchain(123)
 print(f"Current status of blockchain - {blockchain}\n") # Data = 123
 blockchain.add(456)
 print(f"Current status of blockchain - {blockchain}\n") # Data = 456 <== Data = 123
 blockchain.add(78910)
 print(f"Current status of blockchain - {blockchain}\n") # Data = 78910 <== Data = 456 <== Data = 123
+
+
+print("============ Test Case 2 ============")
+blockchain = Blockchain(1)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 1
+blockchain.add(2)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 2 <== 1
+blockchain.add(3)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 3 <== 2 <== 1
+blockchain.add(4)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 4 <== 3 <== 2 <== 1
+blockchain.add(5)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 5 <== 4 <== 3 <== 2 <== 1
+blockchain.add(6)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 6 <== 5 <== 4 <== 3 <== 2 <== 1
+blockchain.add(7)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 7 <== 6 <== 5 <== 4 <== 3 <== 2 <== 1
+blockchain.add(8)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 8 <== 7 <== 6 <== 5 <== 4 <== 3 <== 2 <== 1
+blockchain.add(9)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 9 <== 8 <== 7 <== 6 <== 5 <== 4 <== 3 <== 2 <== 1
+blockchain.add(10)
+print(f"Current status of blockchain - {blockchain}\n") # Data = 10 <== 9 <== 8 <== 7 <== 6 <== 5 <== 4 <== 3 <== 2 <== 1
+
+
+print("============ Test Case 3 ============")
+blockchain = Blockchain()       # TypeError: __init__() missing 1 required positional argument: 'data' 

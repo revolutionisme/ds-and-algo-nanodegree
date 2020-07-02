@@ -174,3 +174,18 @@ if __name__ == "__main__":
 
     print ("The content of the decoded data is: {}".format(decoded_data))  # Expected - a 
     print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))  # Expected - 50
+
+
+    print("==========Test Case 4==========")
+    #Empty String
+    test_data = ""
+
+    print (f"The content of the data is: {test_data}")  # Expected - 
+    print (f"The size of the data is: {sys.getsizeof(test_data)}")  # Expected - 49
+
+    huff_code = HuffmanCoding()
+    encoded_data, tree = huff_code.encoding(test_data)
+    assert "" == encoded_data
+
+    print (f"The content of the encoded data is: {encoded_data}")  # Expected - 
+    print (f"The size of the encoded data is: {sys.getsizeof(int(encoded_data, base=2))}")  # ValueError: invalid literal for int() with base 2: ''
