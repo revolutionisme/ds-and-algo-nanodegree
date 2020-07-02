@@ -73,4 +73,4 @@ print(f"Current status of blockchain - {blockchain}\n") # Data = 10 <== 9 <== 8 
 
 
 print("============ Test Case 3 ============")
-blockchain = Blockchain()       # TypeError: __init__() missing 1 required positional argument: 'data' 
+# blockchain = Blockchain()       # TypeError: __init__() missing 1 required positional argument: 'data' 
