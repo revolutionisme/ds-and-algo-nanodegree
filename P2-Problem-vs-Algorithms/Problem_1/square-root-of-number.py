@@ -7,6 +7,9 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
+    if number < 0 :
+       print("Number must be greater than 0")
+       return None 
     sqrt = number**(0.5)
     return int(sqrt)
 
@@ -17,3 +20,4 @@ print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
 print ("Pass" if  (5 == sqrt(35)) else "Fail")
 print ("Pass" if  (1 == sqrt(2)) else "Fail")
+print ("Pass" if  (1 == sqrt(-1)) else "Fail")
