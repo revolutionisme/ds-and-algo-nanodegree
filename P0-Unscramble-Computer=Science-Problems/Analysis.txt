@@ -1,0 +1,18 @@
+Task0: 
+O(1) -> Fixed computation, no impact of number of inputs
+
+Task1: 
+O(n+m) -> Single iteration depending on the number of items in both the files.
+m -> inputs in texts.csv, n -> inputs in calls.csv
+
+Task2:
+O(n) -> Single iteration over calls.csv and another iteration to find the max value in the doctionary, so technically O(2n), but simple Big O is n
+
+Task3:
+O(n+plogp) -> Single iteration over calls.csv and then sorting the set which is much smaller than n in our case
+n -> inputs in calls.csv, p -> entries in set area_code
+
+Task4:
+O(n+m+plogp)
+Single iteration over calls.csv and texts.csv, and then sorting the potential spam numbers set which is much smaller than n in our case
+n -> inputs in calls.csv, m-> inputs in texts.csv, p -> entries in set potential spam numbers
